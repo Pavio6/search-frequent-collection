@@ -114,8 +114,10 @@ def main(file_path, support_thresholds, sort_method='support'):
 
 
 if __name__ == "__main__":
-    # 参数设置
-    file_path = 'C:\\Users\\93198\\Desktop\\information-processing\\notes\\baskets.csv'
+    import os
+
+    # 修改后（相对路径）：
+    file_path = os.path.join(os.path.dirname(__file__), 'baskets.csv')
     support_thresholds = [0.01, 0.03, 0.05, 0.1, 0.15]  # 支持度阈值（百分比）
 
     # 运行主程序
